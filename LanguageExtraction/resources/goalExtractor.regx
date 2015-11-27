@@ -1,0 +1,24 @@
+{
+     ruleType: "tokens",
+     pattern: ( ( [ { tag:/VB.+/ } ]) ),
+     result:  "GOAL"
+}
+
+{
+     ruleType: "tokens",
+     pattern: ( ( [ { tag:DT } ] [ { tag:NN } ] ) ),
+     result:  "GOAL"
+}
+
+{
+     ruleType: "tokens",
+     pattern: ( ( [ { tag:VB } ] [ { tag:NN } ] [ { tag:NNS } ]?? ) ),
+     result:  "GOAL"
+}
+
+{
+     ruleType: "tokens",
+     pattern: ( ( [ { word:/To/} ] [ { tag:VB } ]) ),
+     result:  "GOAL"
+}
+ 

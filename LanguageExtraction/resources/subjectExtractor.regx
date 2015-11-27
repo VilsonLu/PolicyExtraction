@@ -1,0 +1,17 @@
+{
+     ruleType: "tokens",
+     pattern: ( ( [ { tag:NNP } ]+) ),
+     result:  "SUBJECT"
+}
+
+{
+     ruleType: "tokens",
+     pattern: ( ( [ { tag:NNP } ]+ [ { tag:/IN|DT/ } ]* [ { tag:NNP } ]+) ),
+     result:  "SUBJECT"
+}
+
+{
+     ruleType: "tokens",
+     pattern: ( ( [ { ner:ORGANIZATION } ]+) ),
+     result:  "SUBJECT"
+}
