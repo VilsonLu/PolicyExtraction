@@ -1,27 +1,18 @@
-import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 
 import edu.stanford.nlp.dcoref.CorefChain;
 import edu.stanford.nlp.dcoref.CorefCoreAnnotations.CorefChainAnnotation;
-import edu.stanford.nlp.dcoref.Dictionaries;
 import edu.stanford.nlp.ling.CoreAnnotations.SentencesAnnotation;
 import edu.stanford.nlp.ling.IndexedWord;
 import edu.stanford.nlp.ling.tokensregex.CoreMapExpressionExtractor;
-import edu.stanford.nlp.ling.tokensregex.MatchedExpression;
-import edu.stanford.nlp.ling.tokensregex.TokenSequenceMatcher;
 import edu.stanford.nlp.ling.tokensregex.TokenSequencePattern;
 import edu.stanford.nlp.pipeline.Annotation;
 import edu.stanford.nlp.semgraph.SemanticGraph;
 import edu.stanford.nlp.semgraph.SemanticGraphCoreAnnotations.CollapsedCCProcessedDependenciesAnnotation;
-import edu.stanford.nlp.tagger.maxent.Dictionary;
-import edu.stanford.nlp.trees.Tree;
 import edu.stanford.nlp.trees.TypedDependency;
-import edu.stanford.nlp.trees.TreeCoreAnnotations.TreeAnnotation;
 import edu.stanford.nlp.util.CoreMap;
-import edu.stanford.nlp.util.IntPair;
 
 
 public class Extractor {
@@ -132,7 +123,8 @@ public class Extractor {
 		policy.setGoal(extractGoal(document));
 		policy.setSubject(extractSubject(document));
 		policy.setScope(extractScope(document));
-		extractConstraint(document);
+		//policy.setConstraints(extractConstraint(document));
+		//policy.setJuridiction(extractJurisdiction(document));
 		return policy;
 	}
 	

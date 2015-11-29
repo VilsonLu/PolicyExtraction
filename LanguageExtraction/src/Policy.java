@@ -3,6 +3,7 @@ import java.util.List;
 
 public class Policy {
 	private String policyNumber;
+	private String policyContent;
 	private String subject;
 	private List<String> goal;
 	private List<String> scope;
@@ -22,6 +23,17 @@ public class Policy {
 	public void setPolicyNumber(String policyNumber) {
 		this.policyNumber = policyNumber;
 	}
+	
+	public String getPolicyContent() {
+		return policyContent;
+	}
+	/**
+	 * @param policyContent the policyContent to set
+	 */
+	public void setPolicyContent(String policyContent) {
+		this.policyContent = policyContent;
+	}
+	
 	/**
 	 * @return the goal
 	 */
