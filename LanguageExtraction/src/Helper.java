@@ -91,7 +91,7 @@ public class Helper {
 	public void savePolicy(List<Policy> policies){
 		DateFormat dateFormat = new SimpleDateFormat("MM-dd-yyyy_HH:mm:ss");
 		Date date = new Date();
-		String strDate = "PolicyExtraction_" + dateFormat.format(date);
+		String strDate = "PolicyExtraction_" + dateFormat.format(date) + ".csv";
 		
 		FileWriter fileWriter = null;
 				
